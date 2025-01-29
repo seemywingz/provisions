@@ -1,6 +1,3 @@
-
-
-
 # Path
 
 # Theme
@@ -11,6 +8,11 @@ oh-my-posh init pwsh --config "X:\OneDrive\Documents\WindowsPowerShell\kev.omp.j
 Set-Alias -Name la -Value ls
 Set-Alias -Name link-git -Value New-Item -Path 'Y:\git' -ItemType SymbolicLink -Value '\\wsl$\kali-linux\home\kali\git'
 
+function GoDocuments { Set-Location -Path "$env:USERPROFILE\Documents" }
+Set-Alias -Name documents -Value GoDocuments
+
+function GoDownloads { Set-Location -Path "$env:USERPROFILE\Downloads" }
+Set-Alias -Name downloads -Value GoDownloads
 
 function .. { Set-Location .. }
 
